@@ -1,0 +1,22 @@
+{
+  "name": "decarb-inspector",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "弹簧钢金相脱碳层图像分析（WebGL2 分块计算，GB/T 224 判定）",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/",
+    "gen:samples": "node --experimental-strip-types scripts/gen-samples.ts",
+    "bench": "vite --open /bench.html"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pngjs": "^6.0.5",
+    "pngjs": "^7.0.0",
+    "typescript": "~5.7.3",
+    "vite": "^6.2.0"
+  }
+}

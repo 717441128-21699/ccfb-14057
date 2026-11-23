@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>性能基准 · 1 亿像素</title>
+  <style>
+    body { background: #0e1117; color: #dfe5ee; font: 14px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif; margin: 0; padding: 24px; }
+    button { background: #38e1c6; color: #06231f; border: 0; border-radius: 8px; padding: 10px 20px; font-weight: 700; cursor: pointer; }
+    pre { background: #171c26; border: 1px solid #2a3342; border-radius: 8px; padding: 16px; overflow: auto; }
+    .pass { color: #4ade80; font-weight: 700; }
+    .fail { color: #ff6b6b; font-weight: 700; }
+    canvas { display: none; }
+  </style>
+</head>
+<body>
+  <h2>1 亿像素（10000×10000）端到端性能基准</h2>
+  <p>合成图生成不计入计时；计时从像素源读取开始，到深度报告产出结束。验收线：≤ 10 s。</p>
+  <button id="run">运行基准（WebGL2）</button>
+  <pre id="out">等待运行…</pre>
+  <canvas id="glcanvas"></canvas>
+  <script type="module" src="/bench/bench.ts"></script>
+</body>
+</html>
